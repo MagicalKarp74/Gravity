@@ -4,17 +4,20 @@ public class GravityCalculator{
     private double fallingTime;
     private double initalPosition;
 
-    public Gravity Calculator( initalVelocity, fallingTime, initialPosition){
+    public GravityCalculator(double initalVelocity, double fallingTime, double initialPosition){
         this.gravity = -9.8;
-        this.initalVelocity  = intialVelocity;
+        this.initialVelocity  = initialVelocity;
         this.fallingTime = fallingTime;
         this.initalPosition = initialPosition;
     }
 
-    public static calculateFinalPosition(){
+    public double getFallingTime(){
+        return fallingTime;
+    }
 
+
+    public double calculateFinalPosition(){
         return 0.5 * gravity * (fallingTime * fallingTime) + initialVelocity * fallingTime + initalPosition;
-
 
 
     }
